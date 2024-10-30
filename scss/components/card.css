@@ -1,1 +1,110 @@
-/*# sourceMappingURL=card.css.map */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+}
+@media (min-width: 40em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 71.875em) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--DarkDesaturatedBlue-Card-BG);
+  color: var(--DesaturatedBlue-Text);
+  text-align: center;
+  padding: 1.5625rem;
+  border-radius: 0.3125rem;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 150ms ease-in-out;
+}
+.card:hover {
+  background-color: var(--dark-card-hover);
+  cursor: pointer;
+}
+.card--facebook {
+  border-top: 0.3125rem solid var(--Facebook);
+}
+.card--twitter {
+  border-top: 0.3125rem solid var(--Twitter);
+}
+.card--instagram {
+  padding-top: 1.875rem;
+}
+.card--instagram::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.3125rem;
+  background: var(--Instagram);
+}
+.card--youtube {
+  border-top: 0.3125rem solid var(--YouTube);
+}
+.card__icon {
+  margin-right: 0.5rem;
+}
+.card__subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.card__platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  margin-top: 0.3125rem;
+  height: 1.25rem;
+}
+.card__username {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.card__followers {
+  margin-bottom: 1.5625rem;
+}
+.card__count {
+  color: var(--White-Text);
+  font-weight: bold;
+  letter-spacing: -0.125rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.card__count--big {
+  font-size: 3.5rem;
+}
+.card__count--small {
+  font-size: 2rem;
+}
+.card__label {
+  color: var(--DesaturatedBlue-Text);
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.3125rem;
+}
+.card__change {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+.card__change--up {
+  color: var(--LimeGreen);
+}
+.card__change--down {
+  color: var(--BrightRed);
+}
+.card__change__number {
+  margin-left: 0.25rem;
+}/*# sourceMappingURL=card.css.map */

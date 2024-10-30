@@ -17,8 +17,8 @@ This is simple, clean project showcasing a social media dashboard with the abili
 
 ### Screenshot
 
-![Dark Theme Image](./images/project-pic-dark)
-![Light Theme Image](./images/project-pic-light)
+![Dark Theme Image](./images/project-pic-dark.jpg)
+![Light Theme Image](./images/project-pic-light.jpg)
 
 ## My process
 I started off with creating the directory  and intializing it with git,then created the various files and folders I required(HTML, CSS, JS etc). I continued with the HTML mark-up, then once that was through started styling with css (setting breakpoints, using custom propertices, grid, flexbox etc.) then I finish it up with writing the javascript for the functionality of the toggle.

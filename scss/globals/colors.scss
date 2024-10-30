@@ -27,20 +27,60 @@
      --LightGrayishBlue-Card-BG: hsl(227, 47%, 96%);
      --DarkGrayishBlue-Text: hsl(228, 12%, 44%);
      --VeryDarkBlue-Text: hsl(230, 17%, 14%);
+     --light-card-hover:hsl(228, 33% ,91%);
 
 
-     //Theme work
-     --background: var(--VeryDarkBlue-BG)
+     //Theme work in light mode
+     --background: var(--White-BG);
+     --text-color:var(--VeryDarkBlue-Text);
+     --text-color2:var(--DarkGrayishBlue-Text);
+     --card-bg:var(--LightGrayishBlue-Card-BG);
+     --card-hover:var(--light-card-hover);
+     --card-text-color:var(--VeryDarkBlue-Text);
+     --toggle-color:var(--Toggle);
+     --toggle-btn-color:var(--White-Text);
+     --dark-mode-text-color:var(--Toggle);
+
 }
 
 @media(prefers-color-scheme: dark){
      
      :root{
-          --background:var(var(--VeryDarkBlue-BG))
+          --background:var(--VeryDarkBlue-BG);
+          --text-color:var(--White-Text);
+          --text-color2:var(--DesaturatedBlue-Text);
+          --card-bg:var(--DarkDesaturatedBlue-Card-BG);
+          --card-hover:var(--dark-card-hover);
+          --card-text-color:var(--White-Text);
+          --toggle-color:var(--Togglegradient);
+          --toggle-btn-color:var(--VeryDarkBlue-BG);
+          --dark-mode-text-color:var(--DesaturatedBlue-Text);
      }
 }
 
+body.dark{
+     --background:var(--VeryDarkBlue-BG);
+     --text-color:var(--White-Text);
+     --text-color2:var(--DesaturatedBlue-Text);
+     --card-bg:var(--DarkDesaturatedBlue-Card-BG);
+     --card-hover:var(--dark-card-hover);
+     --card-text-color:var(--White-Text);
+     --toggle-color:var(--Togglegradient);
+     --toggle-btn-color:var(--VeryDarkBlue-BG);
+     --dark-mode-text-color:var(--DesaturatedBlue-Text);
+}
 
+body.light{
+     --background: var(--White-BG);
+     --text-color:var(--VeryDarkBlue-Text);
+     --text-color2:var(--DarkGrayishBlue-Text);
+     --card-bg:var(--LightGrayishBlue-Card-BG);
+     --card-hover:var(--light-card-hover);
+     --card-text-color:var(--VeryDarkBlue-Text);
+     --toggle-color:var(--Toggle);
+     --toggle-btn-color:var(--White-Text);
+     --dark-mode-text-color:var(--Toggle);
+}
 
 
 

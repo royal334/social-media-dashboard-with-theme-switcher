@@ -15,8 +15,8 @@
 }
 
 .card {
-  background-color: var(--DarkDesaturatedBlue-Card-BG);
-  color: var(--DesaturatedBlue-Text);
+  background-color: var(--card-bg);
+  color: var(--text-color2);
   text-align: center;
   padding: 1.5625rem;
   border-radius: 0.3125rem;
@@ -25,7 +25,7 @@
   transition: background-color 150ms ease-in-out;
 }
 .card:hover {
-  background-color: var(--dark-card-hover);
+  background-color: var(--card-hover);
   cursor: pointer;
 }
 .card--facebook {
@@ -73,11 +73,12 @@
   margin-bottom: 1.5625rem;
 }
 .card__count {
-  color: var(--White-Text);
+  color: var(--card-text-color);
   font-weight: bold;
   letter-spacing: -0.125rem;
   line-height: 1;
   margin-bottom: 0.25rem;
+  letter-spacing: 0.03125rem;
 }
 .card__count--big {
   font-size: 3.5rem;

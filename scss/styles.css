@@ -18,14 +18,55 @@
   --LightGrayishBlue-Card-BG: hsl(227, 47%, 96%);
   --DarkGrayishBlue-Text: hsl(228, 12%, 44%);
   --VeryDarkBlue-Text: hsl(230, 17%, 14%);
-  --background: var(--VeryDarkBlue-BG) ;
+  --light-card-hover:hsl(228, 33% ,91%);
+  --background: var(--White-BG);
+  --text-color:var(--VeryDarkBlue-Text);
+  --text-color2:var(--DarkGrayishBlue-Text);
+  --card-bg:var(--LightGrayishBlue-Card-BG);
+  --card-hover:var(--light-card-hover);
+  --card-text-color:var(--VeryDarkBlue-Text);
+  --toggle-color:var(--Toggle);
+  --toggle-btn-color:var(--White-Text);
+  --dark-mode-text-color:var(--Toggle);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background:var(var(--VeryDarkBlue-BG)) ;
+    --background:var(--VeryDarkBlue-BG);
+    --text-color:var(--White-Text);
+    --text-color2:var(--DesaturatedBlue-Text);
+    --card-bg:var(--DarkDesaturatedBlue-Card-BG);
+    --card-hover:var(--dark-card-hover);
+    --card-text-color:var(--White-Text);
+    --toggle-color:var(--Togglegradient);
+    --toggle-btn-color:var(--VeryDarkBlue-BG);
+    --dark-mode-text-color:var(--DesaturatedBlue-Text);
   }
 }
+body.dark {
+  --background:var(--VeryDarkBlue-BG);
+  --text-color:var(--White-Text);
+  --text-color2:var(--DesaturatedBlue-Text);
+  --card-bg:var(--DarkDesaturatedBlue-Card-BG);
+  --card-hover:var(--dark-card-hover);
+  --card-text-color:var(--White-Text);
+  --toggle-color:var(--Togglegradient);
+  --toggle-btn-color:var(--VeryDarkBlue-BG);
+  --dark-mode-text-color:var(--DesaturatedBlue-Text);
+}
+
+body.light {
+  --background: var(--White-BG);
+  --text-color:var(--VeryDarkBlue-Text);
+  --text-color2:var(--DarkGrayishBlue-Text);
+  --card-bg:var(--LightGrayishBlue-Card-BG);
+  --card-hover:var(--light-card-hover);
+  --card-text-color:var(--VeryDarkBlue-Text);
+  --toggle-color:var(--Toggle);
+  --toggle-btn-color:var(--White-Text);
+  --dark-mode-text-color:var(--Toggle);
+}
+
 :root {
   --font-inter: "Inter", sans-serif;
 }
@@ -44,7 +85,7 @@ body {
   padding: 0;
   font-family: var(--font-inter);
   background: var(--background);
-  color: var(--White-Text);
+  color: var(--text-color);
 }
 
 .visually-hidden {
@@ -114,7 +155,7 @@ a, a:visited, a:active {
 .header__subtitle {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--DesaturatedBlue-Text);
+  color: var(--text-color2);
 }
 
 .toggle {
@@ -126,6 +167,8 @@ a, a:visited, a:active {
 }
 .toggle label {
   font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--dark-mode-text-color);
 }
 .toggle__wrapper {
   width: 3rem;
@@ -135,14 +178,14 @@ a, a:visited, a:active {
 .toggle input[type=radio] {
   opacity: 0;
   margin: 0 -0.125rem 0 -0.125rem;
-  width: 1.25rem;
+  width: 1.5rem;
   height: 1.5rem;
 }
 .toggle input[type=radio]:focus ~ .toggle__button {
   border: 2px solid hsl(0, 19%, 91%);
 }
 .toggle__background {
-  background: var(--Togglegradient);
+  background: var(--toggle-color);
   height: 100%;
   display: block;
   border-radius: 0.75rem;
@@ -159,7 +202,7 @@ a, a:visited, a:active {
   width: 1.125rem;
   height: 1.125rem;
   border-radius: 50%;
-  background-color: var(--VeryDarkBlue-BG);
+  background-color: var(--toggle-btn-color);
   transition: all 150ms ease-in-out;
 }
 
@@ -185,8 +228,8 @@ a, a:visited, a:active {
 }
 
 .card {
-  background-color: var(--DarkDesaturatedBlue-Card-BG);
-  color: var(--DesaturatedBlue-Text);
+  background-color: var(--card-bg);
+  color: var(--text-color2);
   text-align: center;
   padding: 1.5625rem;
   border-radius: 0.3125rem;
@@ -195,7 +238,7 @@ a, a:visited, a:active {
   transition: background-color 150ms ease-in-out;
 }
 .card:hover {
-  background-color: var(--dark-card-hover);
+  background-color: var(--card-hover);
   cursor: pointer;
 }
 .card--facebook {
@@ -243,11 +286,12 @@ a, a:visited, a:active {
   margin-bottom: 1.5625rem;
 }
 .card__count {
-  color: var(--White-Text);
+  color: var(--card-text-color);
   font-weight: bold;
   letter-spacing: -0.125rem;
   line-height: 1;
   margin-bottom: 0.25rem;
+  letter-spacing: 0.03125rem;
 }
 .card__count--big {
   font-size: 3.5rem;

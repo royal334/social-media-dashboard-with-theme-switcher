@@ -12,14 +12,27 @@
 }
 .header__title {
   width: 100%;
+  margin-bottom: 1.5625rem;
 }
 @media (min-width: 40em) {
   .header__title {
     width: auto;
+    margin-bottom: 0;
   }
 }
 .header__subtitle {
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--text-color2);
+}
+
+.line {
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--Toggle);
+}
+@media (min-width: 40em) {
+  .line {
+    display: none;
+  }
 }/*# sourceMappingURL=header.css.map */

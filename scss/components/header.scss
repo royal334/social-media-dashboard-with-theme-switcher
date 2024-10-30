@@ -13,9 +13,10 @@
 
      &__title{
           width: 100%;
-
+          margin-bottom: rem(25);
           @include breakpoint(medium){
                width: auto;
+               margin-bottom: 0;
           }
      }
 
@@ -25,6 +26,14 @@
           color: var(--text-color2);
      }
 
+}
 
+.line{
+     width: 100%;
+     height: rem(2);
+     background-color: var(--Toggle);
 
+     @include breakpoint(medium){
+          display: none;
+     }
 }

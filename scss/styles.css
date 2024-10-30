@@ -124,7 +124,7 @@ a, a:visited, a:active {
 .container {
   max-width: 68.75rem;
   padding: 0 1.5625rem;
-  margin: 0 auto 2.875rem;
+  margin: 0 auto 2rem;
 }
 @media (min-width: 71.875em) {
   .container {
@@ -146,10 +146,12 @@ a, a:visited, a:active {
 }
 .header__title {
   width: 100%;
+  margin-bottom: 1.5625rem;
 }
 @media (min-width: 40em) {
   .header__title {
     width: auto;
+    margin-bottom: 0;
   }
 }
 .header__subtitle {
@@ -158,12 +160,31 @@ a, a:visited, a:active {
   color: var(--text-color2);
 }
 
+.line {
+  width: 100%;
+  height: 0.125rem;
+  background-color: var(--Toggle);
+}
+@media (min-width: 40em) {
+  .line {
+    display: none;
+  }
+}
+
 .toggle {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   border: none;
   gap: 1rem;
   margin: 0;
+  margin-top: 0.625rem;
+}
+@media (min-width: 40em) {
+  .toggle {
+    width: auto;
+  }
 }
 .toggle label {
   font-size: 0.875rem;
